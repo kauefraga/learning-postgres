@@ -20,5 +20,8 @@
     "eslint-plugin-import": "^2.25.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "*"
+  },
+  "dependencies": {
+    "postgres": "^3.3.0"
   }
 }
