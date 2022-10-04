@@ -1,7 +1,7 @@
 {
   "name": "learning-postgres",
   "private": true,
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
     "start": "node .",
