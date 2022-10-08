@@ -21,8 +21,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "*",
-    "vitest": "^0.23.4"
+    "typescript": "*"
   },
   "dependencies": {
     "cuid": "^2.1.8",
