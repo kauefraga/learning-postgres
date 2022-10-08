@@ -21,7 +21,7 @@
   />
 </p>
 
-<h4 align="center">Trying out SQL using postgres "bare metal" (without orm) </h4>
+<h4 align="center">🐘 Trying out SQL using Postgres without orm 🐘</h4>
 
 ## 📝 Table of contents
 - What do you need to run it
@@ -29,7 +29,7 @@
     - [pnpm](https://pnpm.io)
   - [docker](https://www.docker.com)
 - How to download
-- How to set up postgres (with docker)
+- How to set up Postgres (with docker)
 
 ## ⬇️ How to download and run
 
@@ -43,19 +43,17 @@ npm run start
 # if you want to develop
 npm run dev
 ```
+Or downloading with yarn? `yarn && yarn build && yarn start`
+<br/>
+Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 
-## 🐳 How to set up postgres (docker image -> bitnami/postgres)
+## 🐳 How to set up Postgres (docker image -> bitnami/postgres)
 ```sh
 # if you get an error try sudo mode
 docker run --name postgresql bitnami/postgresql:latest
 docker-compose up -d
 ```
-
 source: https://hub.docker.com/r/bitnami/postgresql
-
-Or downloading with yarn? `yarn && yarn build && yarn start`
-<br/>
-Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 
 ## 💻 Technologies
 
@@ -68,8 +66,8 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
 - 🐘 Database [Postgres](https://www.npmjs.com/package/postgres)
   > PostgreSQL is a relational database. It is the driver implementation for nodejs
-- ⚗️ Running tests on [Vitest](https://vitest.dev)
-  > Implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+- 👀 Logging with [Winston](https://www.npmjs.com/package/winston)
+  > Winston is fully featured logger for NodeJS applications
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
   > Improve dev experience by adding type safety
 
@@ -78,16 +76,16 @@ Sincerely, i prefer pnpm so: `pnpm i && pnpm build && pnpm start`
 ```bash
 .
 ├─ src
-│  ├─ entities
 │  ├─ infra
 │    ├─ migrations
 │    ├─ db.ts
+│    ├─ logger.ts
 │    ├─ run-migrations.ts
 │  ├─ main.ts
+│  ├─ query.sql
 ├─ .eslintrc.json
 ├─ .env
 ├─ docker-compose.yaml
-├─ vitest.config.ts
 └─ tsconfig.json
 ```
 
