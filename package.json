@@ -25,7 +25,9 @@
     "vitest": "^0.23.4"
   },
   "dependencies": {
+    "cuid": "^2.1.8",
     "dotenv": "^16.0.3",
-    "postgres": "^3.3.0"
+    "postgres": "^3.3.0",
+    "winston": "^3.8.2"
   }
 }
