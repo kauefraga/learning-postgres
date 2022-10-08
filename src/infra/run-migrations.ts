@@ -1,41 +1,23 @@
+import { logger } from './logger';
 import { createUsersTable } from './migrations/create_users_table';
 import { insertUsers } from './migrations/insert_users';
 
 // factory pattern
 async function migrationsRunner() {
-  createUsersTable();
-  insertUsers([
-    {
-      name: 'Ana <3',
-    },
-    {
-      name: 'O Melhor',
-    },
-    {
-      name: 'The Best',
-    },
-    {
-      name: 'A Melhor',
-    },
-    {
-      name: 'Carlos',
-    },
-    {
-      name: 'Antônio',
-    },
-    {
-      name: 'Jonas',
-    },
-    {
-      name: 'claramente niwba',
-    },
-    {
-      name: 'Kauê',
-    },
-    {
-      name: 'Aron <3<3<3<3',
-    },
+  await createUsersTable();
+
+  await insertUsers([
+    { name: 'Ana <3' },
+    { name: 'O Melhor' },
+    { name: 'Carlos' },
+    { name: 'Jonas' },
+    { name: 'Kauê' },
+    { name: 'Aron <3<3<3<3' },
   ]);
 }
 
-migrationsRunner();
+try {
+  migrationsRunner();
+} catch (e: any) {
+  logger.error(e.message);
+}
